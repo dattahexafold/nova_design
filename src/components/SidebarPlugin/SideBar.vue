@@ -1,23 +1,22 @@
 <template>
   <div
     class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white"
-    >
-    <!-- @mouseenter="$sidebar.onMouseEnter()"
-    @mouseleave="$sidebar.onMouseLeave()" up -->
+    @mouseenter="$sidebar.onMouseEnter()"
+    @mouseleave="$sidebar.onMouseLeave()"
+  >
     <div class="scrollbar-inner" ref="sidebarScrollArea">
       <div class="sidenav-header d-flex align-items-center">
         <a class="navbar-brand" href="#">
           <img :src="logo" class="navbar-brand-img" alt="Sidebar logo" />
         </a>
         <div class="ml-auto">
-          <!-- Sidenav toggler -->
+          <!-- Sidenav togglerr -->
           <div
             class="sidenav-toggler d-none d-xl-block"
-     
+            :class="{ active: !$sidebar.isMinimized }"
             @click="minimizeSidebar"
           >
-          <!-- :class="{ active: !$sidebar.isMinimized }" up la -->
-            <div class="sidenav-toggler-inner">
+            <div class="sidenav-toggler-inner ">
               <i class="sidenav-toggler-line"></i>
               <i class="sidenav-toggler-line"></i>
               <i class="sidenav-toggler-line"></i>
@@ -49,9 +48,7 @@
   </div>
 </template>
 <script>
-// onMouseEnter
 export default {
-  // breakpoint
   name: "sideBar",
   props: {
     title: {
@@ -95,7 +92,7 @@ export default {
     },
   },
   mounted() {
-    // this.$sidebar.isMinimized = this.$sidebar.breakpoint < window.innerWidth;
+    this.$sidebar.isMinimized = this.$sidebar.breakpoint < window.innerWidth;
     this.minimizeSidebar();
   },
   beforeUnmount() {

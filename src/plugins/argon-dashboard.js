@@ -1,8 +1,8 @@
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
 
-import "../assets/css/nucleo/css/nucleo.css";
-import "../assets/sass/argon.scss";
+import "../assets/css/nucleo-icons.css";
+import "../assets/scss/argon-dashboard.scss";
 import SidebarPlugin from "../components/SidebarPlugin";
 import "bootstrap/dist/js/bootstrap.min.js";
 

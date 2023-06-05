@@ -1,8 +1,7 @@
 <template>
   <div class="wrapper">
     <!-- <notifications></notifications> -->
-    <!-- v-if="!$route.meta.hideSidebar" -->
-    <side-bar >
+    <side-bar>
       <template v-slot:links>
         <sidebar-item
           :link="{
@@ -173,14 +172,14 @@
         </ul>
       </template>
     </side-bar>
-    <!-- <div class="main-content">
-      <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar>
+    <div class="main-content">
+      <!-- <dashboard-navbar :type="$route.meta.navbarType"></dashboard-navbar>
 
       <div @click="$sidebar.displaySidebar(false)">
         <router-view></router-view>
       </div>
-      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
-    </div> -->
+      <content-footer v-if="!$route.meta.hideFooter"></content-footer> -->
+    </div>
   </div>
 </template>
 <script>
@@ -203,16 +202,13 @@ function initScrollbar(className) {
   }
 }
 
-// import DashboardNavbar from "./DashboardNavbar.vue";/
-// import ContentFooter from "./ContentFooter.vue";meta
-import SidebarItem from "@/components/SidebarPlugin/SidebarItem.vue";
-import SideBar from "@/components/SidebarPlugin/SideBar.vue";
+// import DashboardNavbar from "./DashboardNavbar.vue";
+// import ContentFooter from "./ContentFooter.vue";
+
 export default {
   components: {
     // DashboardNavbar,
     // ContentFooter,
-    SidebarItem,
-    SideBar
   },
   methods: {
     initScrollbar() {

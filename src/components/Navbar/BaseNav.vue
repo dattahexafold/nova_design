@@ -36,8 +36,12 @@
   </nav>
 </template>
 <script>
+import NavbarToggleButton from './NavbarToggleButton.vue'
 export default {
   name: "base-nav",
+  components:{
+    NavbarToggleButton
+  },
   props: {
     show: {
       type: Boolean,
